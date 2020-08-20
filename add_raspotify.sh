@@ -5,7 +5,7 @@ curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
 sudo rm /etc/default/raspotify
 
 #write config-file new
-##################################contains user credentials!
+##################################contains user credentials that must be filled out
 echo "# /etc/default/raspotify -- Arguments/configuration for librespot" | sudo tee -a /etc/default/raspotify
 echo "" | sudo tee -a /etc/default/raspotify
 echo "# Device name on Spotify Connect" | sudo tee -a /etc/default/raspotify
@@ -26,7 +26,8 @@ echo "#" | sudo tee -a /etc/default/raspotify
 echo "# To choose a different output device (ie a USB audio dongle or HDMI audio out)," | sudo tee -a /etc/default/raspotify
 echo "# use ``--device`` with something like ``--device hw:0,1``. Your mileage may vary." | sudo tee -a /etc/default/raspotify
 echo "#" | sudo tee -a /etc/default/raspotify
-echo "OPTIONS=\"--username hellmann23091999 --password 0ad12a912c216950378b6e24c4121adc0f8af75dfc0957de0c0dc1ee8939c530 --device hw:1,0\"" | sudo tee -a /etc/default/raspotify
+# you need to enter your user credentials here beforehand
+echo "OPTIONS=\"--username <username> --password <password> --device hw:1,0\"" | sudo tee -a /etc/default/raspotify
 echo "" | sudo tee -a /etc/default/raspotify
 echo "# Uncomment to use a cache for downloaded audio files. Cache is disabled by" | sudo tee -a /etc/default/raspotify
 echo "# default. It's best to leave this as-is if you want to use it, since" | sudo tee -a /etc/default/raspotify
